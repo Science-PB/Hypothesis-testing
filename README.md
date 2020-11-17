@@ -92,6 +92,8 @@ to or less than that of the placebo. The alternative hypothesis is that the pres
 in those that received drug or drug+ than those that received the placebo. Figure 4 showcases the R-
 code used and the results of running a prop.test.
 
+<img width="738" alt="Screen Shot 2020-11-16 at 8 16 32 PM" src="https://user-images.githubusercontent.com/66921930/99327868-dfa7bb00-2848-11eb-9aad-183e55b12639.png">
+
 
 From the results in Figure 4, the calculated p-value of 0.98 is significantly larger than the
 predetermined alpha, or significance value, of 0.05. Unlike previous tests run, this results in the
@@ -110,8 +112,55 @@ male and female cat samples had the same bodyweight, the f-test will look at the
 bodyweight in male and female cats. Figure 5 provides the R-code utilized and results of a two-tailed f-
 test. 
 
-
+<img width="740" alt="Screen Shot 2020-11-16 at 8 17 36 PM" src="https://user-images.githubusercontent.com/66921930/99327869-dfa7bb00-2848-11eb-9217-98fc5cf49ad3.png">
 
 The null hypothesis utilized in this scenario reflects that there is no variance between the body
 weights of cats regardless of gender. The alternate hypothesis states that there is a statistically
-significant difference. Utilizing an alpha, or significance, of 0.05 and comparing that against the p-value
+significant difference. Utilizing an alpha, or significance, of 0.05 and comparing that against the p-value of 0.0001 obtained, the determination is to reject the null hypothesis. There is enough evidence to
+support the claim that there is a difference in the variance of body weight between male and female
+cats. The ratio variance between the two populations in this example is calculated as 2.91.
+
+# Conclusion
+
+Data analysis is the cornerstone of modern analytics. To analyze data properly and make
+determinations from experiments, a solid understanding of the different methods of hypothesis testing
+is necessary. There are several criticisms in the environment regarding the use of hypothesis testing.
+Many of these criticisms however, come from a lack of understanding that hypothesis testing is meant
+as a way to make a determination of a hypothesis and is subject to error, it is not an absolute truth. As
+there are many different types of hypothesis testing out there, another component is ensuring the right
+test is conducted based on the dataset along with an appropriate null and alternate hypothesis used.
+When the wrong test is utilized, or a hypothesis is not appropriately structured, the result can be deeply
+flawed, and improper assumptions can be made when identifying what claim to make. One of the most
+significant values when making a determination from a hypothesis test is the p-value. As showcased
+throughout this report, the p-value and where it fell in regards to the significance value utilized was a
+main contributor in determining whether to accept or reject a null hypothesis and it was also an output
+value of every single hypothesis test utilized.
+Inferential statistics is fundamental to the field through its determination of relationships
+between variables and making predictions (Bluman, 2018). This makes hypothesis testing one of the
+main tools utilized in this space, validating its necessity to the field of statistics.
+
+# References
+
+Frost, J. (2020). Statistical Hypothesis Testing Overview. Statistics by Jim. Retrieved from:
+https://statisticsbyjim.com/hypothesis-testing/statistical-hypothesis-testing-overview/
+
+Bluman, A. (2018). Elementary Statistics: A Step by Step Approach (10th ed.). New York, NY: McGraw-
+Hill Education.
+
+Kent State University. (2020). SPSS Tutorials: One Sample T Test. Kent State University. Retrieved from:
+https://libguides.library.kent.edu/SPSS/OneSampletTest
+
+Stat Trek. (2020) 1.3.5.3 Two-Sample t-Test. Stat Trek. Retrieved from:
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm
+
+GraphPad. (n.d.). Interpreting a confidence interval of a mean. GraphPad. Retrieved from:
+https://www.graphpad.com/guides/prism/7/statistics/stat_more_about_confidence_interval.htm
+
+Gillespie, C. (2018, June). What Does a Negative T-Value Mean? Sciencing. Retrieved from:
+https://sciencing.com/negative-tvalue-mean-6921215.html
+
+Penn State. (n.d.). Test of Equal or Given Proportions. Penn State. Retrieved from:
+https://astrostatistics.psu.edu/su07/R/html/stats/html/prop.test.html
+
+Nist Sematech. (n.d.). 1.3.5.9. F-Test for Equality of Two Variances. Nist Sematech. Retrieved from:
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda359.htm
