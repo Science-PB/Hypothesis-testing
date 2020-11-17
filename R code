@@ -1,0 +1,48 @@
+#A. Load the MASS Library in R...Package 'MASS' which provides a description of the datasets available in the MASS Package
+library(MASS)
+#Additional Library functions:
+library(FSAdata) #For headtail function
+
+#B.  One-sample t-test: Use the “chem” dataset to answer the question,
+#“is the flour production company producing whole meal flour with greater
+#than 1 part per million copper in it?” 
+#H0: mu <= 1
+#Ha: mu > 1
+chem
+t.test(chem,mu=1,alternative = "greater",conf.level=0.95)
+
+#C. Two-sample t-test: Use the “cats” dataset to answer the question,
+#“do male and female cat samples have the same body weight?” 
+#Hint: one way to get separate vectors for male and female cat body weight
+#is to use the subset function as follows: “male <-subset(cats, subset=(cats$Sex=M))” 
+#H0: mu_1 = mu_2
+#Ha: mu_1 != mu_2
+headtail(cats)
+catsM <- cats[cats$Sex=='M',]
+catsF <- cats[cats$Sex=='F',]
+t.test(catsM$Bwt,catsF$Bwt,alternative="two.sided")
+
+#D. Paired t-test: Use the “shoes” dataset to answer the question,
+#“did material A wear better than material B?” 
+#H0: mu_1 >= mu_2
+#Ha: mu_1 < mu_2
+shoes
+t.test(shoes$A,shoes$B,paired=TRUE,alternative="less")
+
+#E. Test of equal or given proportions: Use the “bacteria” data set
+#to answer the question, “did the drug treatment have a significant
+#effect of the presence of the bacteria compared with the placebo?” 
+#H0: mu_1 <= mu_2
+#Ha: mu_1 > mu_2
+headtail(bacteria)
+btable<-table(bacteria$y,bacteria$trt)
+btable
+prop.test(x = c(31,12), n = c(124,96), alternative = "greater")
+
+
+#F. F-test: Use the “cats” data set to test for the variance
+#of the body weight in male and female cats. 
+#H0: s_1^2 = s_2^2
+#Ha: s_1^2 != s_2^2
+headtail(cats)
+var.test(catsM$Bwt, catsF$Bwt, alternative="two.sided")
