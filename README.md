@@ -40,6 +40,7 @@ For the use of a one-sample t-test, the dataset “chem” from the R package �
 utilized. This dataset contains 24 determinations of copper in whole meal flour. What is being evaluated is if the flour production company is producing whole meal flour with greater than 1 part per million of
 copper. The R-code for a one-sample t-test and the results can be seen in Figure 1.
 
+<img width="723" alt="Screen Shot 2020-11-16 at 8 11 25 PM" src="https://user-images.githubusercontent.com/66921930/99327569-3bbe0f80-2848-11eb-8260-ba7a92eb6b2e.png">
 
 
 Based on the question posed, a null hypothesis representing that the copper in whole meal flour
@@ -58,6 +59,7 @@ with the intent to determine if male and female cat samples have the same body w
 body weight of female cats, with the null hypothesis being the body weights are not equal. Figure 2
 provides the R-code and results of running a two-sample t-test to make this determination.
 
+<img width="728" alt="Screen Shot 2020-11-16 at 8 12 07 PM" src="https://user-images.githubusercontent.com/66921930/99327572-3bbe0f80-2848-11eb-9e86-0fae07e47a09.png">
 
 Reviewing the results of the test in Figure 2, a relatively high t-value is seen paired with a near
 zero probability value. Since the p-value is well below the alpha, or significance value, of 0.05 the
@@ -69,6 +71,7 @@ of 10 boys. In this experiment, the intent is to determine whether material A wo
 B. Overall, there is limited information on this particular dataset so the following assumptions are made:a higher value means more wear and when assessing if material A wore better, the assumption is that
 less wear equates to wearing better. The R-code applied, and results can be seen in Figure 3.
 
+<img width="720" alt="Screen Shot 2020-11-16 at 8 12 49 PM" src="https://user-images.githubusercontent.com/66921930/99327575-3c56a600-2848-11eb-8499-447fcd6919bf.png">
 
 In this experiment the intent is to find if material A wore better, i.e. had less wear, than material
 B, so the null hypothesis is set up as the materials having the same wear or material B wearing better,
@@ -79,3 +82,36 @@ value are attained. With these results, the decision can be made to reject the n
 express that there is enough evidence to support the claim that material A wore better than material B.
 
 # Test of Equal or Given Proportions
+Moving forward from t-tests another hypothesis testing option is the test of equal or given
+proportions. This type of test is utilized for when the intent is to test that the probabilities of success in
+several groups are the same or equal to specific given values (Penn State, n.d.). A count of successes
+and failures as well as a count of trials is used to enable calculations to be run. To showcase the use of this type of test, the “bacteria” dataset is used from R package “MASS” to determine if an applied drug
+treatment had a significant effect on the presence of bacteria compared with the placebo. The null
+hypothesis is written as the combination of drug and drug+ with bacteria present in the dataset is equal
+to or less than that of the placebo. The alternative hypothesis is that the presence of bacteria is greater
+in those that received drug or drug+ than those that received the placebo. Figure 4 showcases the R-
+code used and the results of running a prop.test.
+
+
+From the results in Figure 4, the calculated p-value of 0.98 is significantly larger than the
+predetermined alpha, or significance value, of 0.05. Unlike previous tests run, this results in the
+determination to not reject the null hypothesis. Ultimately what this states is that there is not enough
+evidence to reject the claim that there is equal or less of a presence of bacteria in those that took the
+drug or drug+ when compared to those that took the placebo, with a 0.75 to 0.86 sample estimate. A confidence interval of -0.22 to 1 provides the difference between the proportions of the drug versus
+placebo.
+
+# F-Test
+
+The final test to be conducted is the f-Test, which is utilized to test variance versus the t-test
+which tests means (Minitab, 2016). The use of a two-tailed f-test examines whether the variances of
+two populations are either equal to each other or not (Nist Sematech, n.d.). For the purposes of
+demonstrating an f-test, the “cats” dataset will again be utilized. Unlike the t-test which tested whether
+male and female cat samples had the same bodyweight, the f-test will look at the variance in
+bodyweight in male and female cats. Figure 5 provides the R-code utilized and results of a two-tailed f-
+test. 
+
+
+
+The null hypothesis utilized in this scenario reflects that there is no variance between the body
+weights of cats regardless of gender. The alternate hypothesis states that there is a statistically
+significant difference. Utilizing an alpha, or significance, of 0.05 and comparing that against the p-value
